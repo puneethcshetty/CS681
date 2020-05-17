@@ -37,20 +37,16 @@ public class Car {
 			if(result==0) 
 				return carPrice;
 			else if(carPrice < result) 
-				return carPrice;
-			else 
-				return result;}
-				);
-		
+				return carPrice; 
+			return result;});
+
 		//maxPrice of cars
 		Integer maxprice=cars.stream().map((Car car) -> car.getPrice()).reduce(0,(result, carPrice)->{
 			if(result==0)
 				return carPrice;
 			else if(carPrice > result)
 				return carPrice;
-			else
-				return result;
-		});
+			return result;});
 
 		//count of cars
 		Integer count=cars.stream().map((Car car) -> car.getPrice()).reduce(0, (result, carPrice)->{
