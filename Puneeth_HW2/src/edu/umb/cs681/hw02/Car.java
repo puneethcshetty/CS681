@@ -5,12 +5,7 @@ import java.util.ArrayList;
 public class Car {
 
 	private int price;
-	private String name;
-	private ArrayList<Car> car;
-
-	public Car() {
-		this.car=new ArrayList<>();
-	}	
+	private String name;	
 	
 	public Car(String name,int price) {
 		this.price=price;
@@ -25,27 +20,17 @@ public class Car {
 		return this.name;
 	}
 
-	public void setCar(ArrayList<Car> car) {
-		this.car=car;
-	}
-
-	public ArrayList<Car> getCar() {
-		return car;
-	}
-
 	//main method
 	public static void main(String args[]) {
 
-		Car Tesla=new Car("X",50000);
-		Car Honda=new Car("Civic",10000);
-		Car Kia=new Car("Kia",7000);
+		Car tesla=new Car("X",50000);
+		Car honda=new Car("Civic",10000);
+		Car kia=new Car("Kia",7000);
 		ArrayList<Car> cars=new ArrayList<Car>();
 
-		Car c=new Car();
-		cars.add(Tesla);
-		cars.add(Honda);
-		cars.add(Kia);
-		c.setCar(cars);
+		cars.add(tesla);
+		cars.add(honda);
+		cars.add(kia);
 		
 		//minPrice of cars
 		Integer minprice=cars.stream().map((Car car)-> car.getPrice()).reduce(0, (result, carPrice)->{
