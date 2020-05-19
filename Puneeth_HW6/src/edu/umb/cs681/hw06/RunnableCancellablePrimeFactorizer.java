@@ -4,7 +4,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer{
 
-
 	protected boolean done=false;
 	ReentrantLock lock = new ReentrantLock();
 
@@ -19,13 +18,6 @@ public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer{
 		} finally {
 			lock.unlock();
 		}
-	}
-
-	public long getFrom() {
-		return from;
-	}
-	public long getTo() {
-		return to; 
 	}
 
 	public void generatePrimeFactors() {
