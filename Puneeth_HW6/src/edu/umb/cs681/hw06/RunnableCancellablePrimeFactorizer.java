@@ -3,7 +3,6 @@ package edu.umb.cs681.hw06;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer{
-
 	protected boolean done=false;
 	ReentrantLock lock = new ReentrantLock();
 
