@@ -20,15 +20,8 @@ public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer{
 		}
 	}
 
-	public long getFrom() {
-		return from;
-	}
-	public long getTo() {
-		return to; 
-	}
-
 	public void generatePrimeFactors() {
-		long divisor = 2;
+		long divisor = from;
 		while( dividend != 1 && divisor <= to ){
 			lock.lock();
 			try {
